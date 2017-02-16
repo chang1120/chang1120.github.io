@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <title>关于我</title>
+    <script>
+        window.onload = function(){
+            var oHeader = document.querySelector('#header');
+            var oFooter = document.querySelector('#footer');
+            //common.js文件使用开始
+            header(oHeader);
+            oHeader.children[0].children[3].className = 'action';
+            footer(oFooter);
+            //common.js文件使用结束
+
+
+        }
+    </script>
+</head>
+<body>
+    <header id="header"></header>
+    <section class="ContSec">
+        <ul class="clearFix">
+            <li class="fl">
+                <div id="ContactBox">
+                    <p>Contact</p>
+                    <p><span>Name:</span>chang</p>
+                    <p><span>Num:</span>13718907246</p>
+                    <p><span>QQ:</span>1592832706</p>
+                    <p><span>Email:</span>1592832706@qq.com</p>
+                </div>
+            </li>
+            <li class="fl">
+                <p>what can i do?</p>
+                <ol class="clearFix">
+                    <li>
+                        <div>PS</div>
+                        <span>95%</span>
+                    </li>
+                    <li>
+                        <div>DW</div>
+                        <span>60%</span>
+                    </li>
+                    <li>
+                        <div>FL</div>
+                        <span>50%</span>
+                    </li>
+                    <li>
+                        <div>AL</div>
+                        <span>80%</span>
+                    </li>
+                </ol>
+                <p>四年电商设计经验，致力于做原创头脑风暴，打破常规思维，做独一无二的创意设计。如果您有需要，记得联系我哦.</p>
+            </li>
+        </ul>
+    </section>
+    <footer id="footer"></footer>
+    <script src="js/common.js"></script>
+</body>
+</html>

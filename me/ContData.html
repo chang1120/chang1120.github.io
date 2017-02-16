@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <title>列表详情</title>
+    <script>
+        window.onload = function(){
+            var oHeader = document.querySelector('#header');
+            var oFooter = document.querySelector('#footer');
+            var oContData = document.getElementById('ContData');
+            var aUl_CD = oContData.querySelectorAll('ul');
+            var aLi_CD1 = aUl_CD[0].children;
+            //common.js文件使用开始
+            footer(oFooter);
+            //common.js文件使用结束
+            for(var i=0; i<aLi_CD1.length; i++){
+                aLi_CD1[i].index = i;
+                aLi_CD1[i].addEventListener('click', function () {
+                    addCookie('Num',this.index);
+                    window.open('Cont.html','_self');
+                },false)
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <header class="header_CD">
+        <img src="images/banner.jpg" alt="青青">
+    </header>
+    <div id="ContData">
+        <section>
+            <nav>
+                <img src="images/Cont1.png" alt="青青">
+                <ol class="clearFix">
+                    <li><span></span>E-MAIL: 1593832706@qq.com</li>
+                    <li><span></span>QQ: 1593832706</li>
+                </ol>
+            </nav>
+            <article>
+                <div><span>电商</span>合成作品</div>
+            </article>
+            <ul class="clearFix">
+                <li><img src="img/00.jpg" alt="青青"></li>
+                <li><img src="img/01.jpg" alt="青青"></li>
+                <li><img src="img/02.jpg" alt="青青"></li>
+                <li><img src="img/03.jpg" alt="青青"></li>
+                <li><img src="img/04.jpg" alt="青青"></li>
+                <li><img src="img/05.jpg" alt="青青"></li>
+                <li><img src="img/06.jpg" alt="青青"></li>
+                <li><img src="img/07.jpg" alt="青青"></li>
+                <li><img src="img/08.jpg" alt="青青"></li>
+                <li><img src="img/09.jpg" alt="青青"></li>
+                <li><img src="img/10.jpg" alt="青青"></li>
+                <li><img src="img/11.jpg" alt="青青"></li>
+            </ul>
+            <article>
+                <div><span>活动</span>专题设计</div>
+            </article>
+            <ul class="clearFix">
+                <li><img src="img/12.jpg" alt="青青"></li>
+                <li><img src="img/13.jpg" alt="青青"></li>
+                <li><img src="img/14.jpg" alt="青青"></li>
+                <li><img src="img/15.jpg" alt="青青"></li>
+                <li><img src="img/16.jpg" alt="青青"></li>
+                <li><img src="img/17.jpg" alt="青青"></li>
+                <li><img src="img/18.jpg" alt="青青"></li>
+                <li><img src="img/19.jpg" alt="青青"></li>
+                <li><img src="img/20.jpg" alt="青青"></li>
+                <li><img src="img/21.jpg" alt="青青"></li>
+                <li><img src="img/22.jpg" alt="青青"></li>
+                <li><img src="img/23.jpg" alt="青青"></li>
+            </ul>
+            <article>
+                <div><span>网页设计</span>欣赏</div>
+            </article>
+            <ul class="clearFix">
+                <li><img src="img/24.jpg" alt="青青"></li>
+                <li><img src="img/25.jpg" alt="青青"></li>
+                <li><img src="img/26.jpg" alt="青青"></li>
+                <li><img src="img/27.jpg" alt="青青"></li>
+                <li><img src="img/28.jpg" alt="青青"></li>
+                <li><img src="img/29.jpg" alt="青青"></li>
+                <li><img src="img/30.jpg" alt="青青"></li>
+                <li><img src="img/31.jpg" alt="青青"></li>
+            </ul>
+            <article>
+                <div><span>移动端页面</span>设计</div>
+            </article>
+            <ul class="clearFix">
+                <li><img src="img/32.jpg" alt="青青"></li>
+                <li><img src="img/33.jpg" alt="青青"></li>
+                <li><img src="img/34.jpg" alt="青青"></li>
+                <li><img src="img/35.jpg" alt="青青"></li>
+                <li><img src="img/36.jpg" alt="青青"></li>
+                <li><img src="img/37.jpg" alt="青青"></li>
+                <li><img src="img/38.jpg" alt="青青"></li>
+                <li><img src="img/39.jpg" alt="青青"></li>
+            </ul>
+            <article>
+                <div><span>其他设计</span></div>
+            </article>
+            <ul class="clearFix">
+                <li><img src="img/40.jpg" alt="青青"></li>
+                <li><img src="img/41.jpg" alt="青青"></li>
+                <li><img src="img/42.jpg" alt="青青"></li>
+                <li><img src="img/43.jpg" alt="青青"></li>
+                <li><img src="img/44.jpg" alt="青青"></li>
+                <li><img src="img/45.jpg" alt="青青"></li>
+                <li><img src="img/46.jpg" alt="青青"></li>
+                <li><img src="img/47.jpg" alt="青青"></li>
+            </ul>
+        </section>
+    </div>
+    <footer id="footer"></footer>
+    <script src="js/common.js"></script>
+</body>
+</html>

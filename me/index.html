@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <script>
+        window.onload = function(){
+            var oCont = document.querySelector('#Cont');
+            var oContLi = oCont.querySelectorAll('li');
+            var oHeader = document.querySelector('#header');
+            var oFooter = document.querySelector('#footer');
+            for(var i = 0; i < oContLi.length ; i++){
+                oContLi[i].onmouseover = function(){
+                    for(var j = 0; j < oContLi.length; j++){
+                        oContLi[j].className = '';
+                        //alert(oContLi[j].children[0]);
+                        oContLi[j].children[0].style.backgroundPositionX= 'left';
+                    }
+                    this.className = 'actions';
+                    this.children[0].style.backgroundPositionX = 'right';
+                }
+            }
+            mov('Banner',3000,5);
+            //common.js文件使用开始
+            header(oHeader);
+            oHeader.children[0].children[0].className = 'action';
+            footer(oFooter);
+            //common.js文件使用结束
+        }
+    </script>
+</head>
+<body>
+    <header id="header"></header>
+    <section>
+        <div id="Banner">
+            <ul>
+                <li><img src="images/banner1.jpg" /></li>
+                <li><img src="images/banner2.jpg" /></li>
+                <li><img src="images/banner3.jpg" /></li>
+                <li><img src="images/banner4.jpg" /></li>
+                <li><img src="images/banner5.jpg" /></li>
+                <li><img src="images/banner6.jpg" /></li>
+            </ul>
+            <ol>
+                <li class="on">0</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ol>
+            <a href="javascript:;" class="prev"><</a>
+            <a href="javascript:;" class="next">></a>
+        </div>
+        <article>
+            <ul class="clearFix" id="Cont">
+                <li class="actions">
+                    <div></div>
+                    <p>网页与视觉</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>移动端设计</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>原创练习作品</p>
+                </li>
+                <li>
+                    <p>ABOUT ME</p>
+                    <p>E-MAIL:1593832706@qq.com</p>
+                    <p>QQ:1593832706</p>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <footer id="footer"></footer>
+    <script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <title>作品详情</title>
+    <script>
+        window.onload = function(){
+            var oHeader = document.querySelector('#header');
+            var oFooter = document.querySelector('#footer');
+            var ContBox = document.querySelector('#ContBox');
+            var oContImg = ContBox.children[1];
+            var oContB = ContBox.getElementsByTagName('b');
+            //common.js文件使用开始
+            header(oHeader);
+            oHeader.children[0].children[2].className = 'action';
+            footer(oFooter);
+            //common.js文件使用结束
+            var Num = getCookie('Num');    //用户ID
+            if(Num == undefined){
+                oContImg.src = 'img/Cont0.jpg'
+            }else{
+                oContImg.src = 'img/Cont'+Num+'.jpg'
+            }
+            ContBox.addEventListener('mouseover', function () {
+                for(var i=0; i<oContB.length; i++){
+                    oContB[i].style.display = 'block';
+                }
+            },false);
+            ContBox.addEventListener('mouseout', function () {
+                for(var i=0; i<oContB.length; i++){
+                    oContB[i].style.display = 'none';
+                }
+            },false);
+            oContB[0].addEventListener('click',function(){
+                if(Num<=0){                                     //最小值
+                    Num = 47;
+                }else{
+                    Num--;
+                    oContImg.src = 'img/Cont'+Num+'.jpg'
+                }
+            },false);
+            oContB[1].addEventListener('click',function(){
+                if(Num>=47){                                     //最大值
+                    Num = 0;
+                }else{
+                    Num++;
+                    oContImg.src = 'img/Cont'+Num+'.jpg'
+                }
+            },false);
+        }
+    </script>
+</head>
+<body>
+    <header id="header"></header>
+    <section class="ContSec">
+        <ul class="clearFix">
+            <li class="fl">
+                <div id="ContBox">
+                    <b></b>
+                    <img id="ContImg" alt="">
+                    <b></b>
+                </div>
+            </li>
+            <li class="fl">
+                <p>what can i do?</p>
+                <ol class="clearFix">
+                    <li>
+                        <div>PS</div>
+                        <span>95%</span>
+                    </li>
+                    <li>
+                        <div>DW</div>
+                        <span>60%</span>
+                    </li>
+                    <li>
+                        <div>FL</div>
+                        <span>50%</span>
+                    </li>
+                    <li>
+                        <div>AL</div>
+                        <span>80%</span>
+                    </li>
+                </ol>
+                <p>四年电商设计经验，致力于做原创头脑风暴，打破常规思维，做独一无二的创意设计。如果您有需要，记得联系我哦.</p>
+            </li>
+        </ul>
+    </section>
+    <footer id="footer"></footer>
+    <script src="js/common.js"></script>
+</body>
+</html>
