@@ -10,16 +10,65 @@
             var oFooter = document.querySelector('#footer');
             var oContData = document.getElementById('ContData');
             var aUl_CD = oContData.querySelectorAll('ul');
-            var aLi_CD1 = aUl_CD[0].children;
+            var aUlImg = oContData.querySelectorAll('img');
+            var aLi_CD0 = aUl_CD[0].children;
+            var aLi_CD1 = aUl_CD[1].children;
+            var aLi_CD2 = aUl_CD[2].children;
+            var aLi_CD3 = aUl_CD[3].children;
+            var aLi_CD4 = aUl_CD[4].children;
             //common.js文件使用开始
             footer(oFooter);
             //common.js文件使用结束
-            for(var i=0; i<aLi_CD1.length; i++){
-                aLi_CD1[i].index = i;
-                aLi_CD1[i].addEventListener('click', function () {
+            for(var i=0; i<aLi_CD0.length; i++){
+                aLi_CD0[i].index = i;
+                aLi_CD0[i].addEventListener('click', function () {
                     addCookie('Num',this.index);
                     window.open('Cont.html','_self');
                 },false)
+            }
+            for(var i=0; i<aLi_CD1.length; i++){
+                aLi_CD1[i].index = i;
+                aLi_CD1[i].addEventListener('click', function () {
+                    addCookie('Num',this.index+12);
+                    window.open('Cont.html','_self');
+                },false)
+            }
+            for(var i=0; i<aLi_CD2.length; i++){
+                aLi_CD2[i].index = i;
+                aLi_CD2[i].addEventListener('click', function () {
+                    addCookie('Num',this.index+24);
+                    window.open('Cont.html','_self');
+                },false)
+            }
+            for(var i=0; i<aLi_CD3.length; i++){
+                aLi_CD3[i].index = i;
+                aLi_CD3[i].addEventListener('click', function () {
+                    addCookie('Num',this.index+32);
+                    window.open('Cont.html','_self');
+                },false)
+            }
+            for(var i=0; i<aLi_CD4.length; i++){
+                aLi_CD4[i].index = i;
+                aLi_CD4[i].addEventListener('click', function () {
+                    addCookie('Num',this.index+40);
+                    window.open('Cont.html','_self');
+                },false)
+            }
+            for(var i=1; i<aUlImg.length; i++){
+                aUlImg[i].addEventListener('mouseover',function(){
+                    this.style.WebkitTransform='scale(1.5) rotate(20deg)';
+                    this.style.MsTransform='scale(1.5) rotate(20deg)';
+                    this.style.OTransform='scale(1.5) rotate(20deg)';
+                    this.style.MozTransform='scale(1.5) rotate(20deg)';
+                    this.style.Transform='scale(1.5) rotate(20deg)';
+                },false);
+                aUlImg[i].addEventListener('mouseout',function(){
+                    this.style.WebkitTransform='scale(1) rotate(0deg)';
+                    this.style.MsTransform='scale(1) rotate(0deg)';
+                    this.style.OTransform='scale(1) rotate(0deg)';
+                    this.style.MozTransform='scale(1) rotate(0deg)';
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                },false);
             }
 
         }
